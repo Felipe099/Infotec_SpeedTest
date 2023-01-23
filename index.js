@@ -1,3 +1,12 @@
+const bodyTest = document.querySelector('#startStopBtn');
+const test = document.querySelector('#test');
+
+bodyTest.addEventListener('click', () => {
+    test.classList.toggle('hidden') == true
+        ? test.classList.remove('hidden')
+        : test.classList.remove('hidden');
+});
+
 function I(i) {
     return document.getElementById(i);
 }
@@ -6,7 +15,8 @@ var s = new Speedtest(); //create speedtest object
 s.setParameter('telemetry_level', 'basic'); //enable telemetry
 
 var meterBk = /Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)
-?"#1d1929":"#1d1929"
+    ? '#1d1929'
+    : '#1d1929';
 
 var dlColor = '#1d1929',
     ulColor = '#1d1929';
@@ -166,4 +176,3 @@ function initUI() {
     I('jitText').textContent = '';
     I('ip').textContent = '';
 }
-

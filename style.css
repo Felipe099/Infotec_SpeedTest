@@ -68,7 +68,7 @@ button i {
 
 #startStopBtn {
     display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     width: 12rem;
     height: 12rem;
     font: 2rem/11rem 'Roboto', sans-serif;
@@ -79,10 +79,12 @@ button i {
     font-weight: bold;
     border-radius: 50%;
     border: 0.15em solid #bdff00;
-    animation: shadow-pulse 1s 30;
     cursor: pointer;
+    animation: downtop 700ms forwards, shadow-pulse 1s 30;
 }
+
 #startStopBtn.running {
+    margin-top: 2rem;
     color: #fff;
     border: 0.15em solid #ff6060;
     animation: shadow-pulsered 1s 30;
@@ -91,6 +93,7 @@ button i {
 #startStopBtn:before {
     content: 'Iniciar';
 }
+
 #startStopBtn.running:before {
     content: 'Cancelar';
 }
@@ -170,6 +173,19 @@ div.testGroup {
     margin-top: 2rem;
 }
 
+.hidden {
+    display: none;
+}
+
+@keyframes downtop {
+    0% {
+        transform: translateY(150px) scale(0.1);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
 @keyframes shadow-pulse {
     0% {
         box-shadow: 0 0 0 0px #bdff00;
