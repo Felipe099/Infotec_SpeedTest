@@ -1,2 +1,2 @@
-setTimeout(function(){initUI()},100)
+setTimeout(function(){initUI()},1000)
 

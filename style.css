@@ -32,13 +32,7 @@ ul {
     font-size: 2rem;
 }
 
-ul a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-button {
+nav ul li button {
     align-items: center;
     font-size: 1.5rem;
     padding: 0.8em 2em;
@@ -52,11 +46,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+nav ul li nav button:hover {
     transform: translate(5px, -5px);
 }
 
-button i {
+nav ul li nav button i {
     font-size: 2rem;
 }
 
@@ -80,14 +74,14 @@ button i {
     border-radius: 50%;
     border: 0.15em solid #bdff00;
     cursor: pointer;
-    animation: downtop 700ms forwards, shadow-pulse 1s 30;
+    animation: downtop 900ms forwards, shadow-pulse 1s 50;
 }
 
 #startStopBtn.running {
     margin-top: 2rem;
     color: #fff;
     border: 0.15em solid #ff6060;
-    animation: shadow-pulsered 1s 30;
+    animation: shadow-pulsered 1s 50;
 }
 
 #startStopBtn:before {
@@ -177,13 +171,114 @@ div.testGroup {
     display: none;
 }
 
+/* MODAL */
+
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+}
+
+.modal-wrapper {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: grid;
+    place-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+    background-color: #1d1929;
+    width: 100rem;
+    height: 50rem;
+
+    text-align: center;
+}
+
+.modal button {
+    position: absolute;
+    top: 1.6rem;
+    right: 1rem;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    box-shadow: none;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
+
+.modal img {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #fff;
+}
+
+.modal h2 {
+    margin-top: 2rem;
+    font-size: 5.4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.box {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.modal h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: 20rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+
+}
+
+.modal a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 0;
+    cursor: pointer;
+
+    transition: color 0.3s;
+}
+
+.modal a:hover {
+    color: #a9d03f;
+}
+
+.modal i {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
 @keyframes downtop {
     0% {
         transform: translateY(150px) scale(0.1);
     }
 
     100% {
-        transform: translateY(0px) scale(1);
+        transform: translateY(0px) scale(2);
+        margin-top: 12rem;
     }
 }
 @keyframes shadow-pulse {
