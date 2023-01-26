@@ -246,7 +246,6 @@ div.testGroup {
     text-align: center;
     justify-content: center;
     color: #fff;
-
 }
 
 .modal a {
@@ -281,6 +280,16 @@ div.testGroup {
         margin-top: 12rem;
     }
 }
+@keyframes downtopMobile {
+    0% {
+        transform: translateY(150px) scale(0.1);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
 @keyframes shadow-pulse {
     0% {
         box-shadow: 0 0 0 0px #bdff00;
@@ -297,10 +306,36 @@ div.testGroup {
         box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
     }
 }
-@media all and (max-width: 350px) {
-    div.testGroup {
+@media (max-width: 500px) {
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+    #test {
         display: flex;
         flex-direction: column;
-        align-items: center;
+    }
+
+    nav ul li button {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        width: 7rem;
+    }
+
+    #startStopBtn {
+        margin-top: 2rem;
+        width: 8rem;
+        height: 8rem;
+        font: 1.5rem/8rem 'Roboto', sans-serif;
+        animation: downtopMobile 900ms forwards, shadow-pulse 1s 50;
+    }
+
+    img {
+        width: 100px;
     }
 }
