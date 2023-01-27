@@ -345,8 +345,8 @@ div.testGroup {
     .modal {
         position: relative;
         background-color: #1d1929;
-        width: 35rem;
-        height: 60rem;
+        width: 30rem;
+        height: 50rem;
 
         text-align: center;
     }
@@ -364,15 +364,15 @@ div.testGroup {
     }
 
     .modal h3 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 0;
-        width: 35rem;
+        width: 30rem;
         color: #fff;
         margin: 1rem 0;
     }
 
     .modal a {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 }
