@@ -256,6 +256,7 @@ div.testGroup {
     color: #fff;
     padding: 1rem 0;
     cursor: pointer;
+    font-size: 2rem;
 
     transition: color 0.3s;
 }
