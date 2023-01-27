@@ -286,7 +286,8 @@ div.testGroup {
     }
 
     100% {
-        transform: translateY(0px) scale(1);
+        transform: translateY(0px) scale(2);
+        margin-top: 12rem;
     }
 }
 
@@ -306,7 +307,8 @@ div.testGroup {
         box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    
     ul {
         display: flex;
         justify-content: space-between;
@@ -316,10 +318,10 @@ div.testGroup {
         font-size: 3rem;
         margin-top: 3rem;
     }
-    #test {
+    /* #test {
         display: flex;
         flex-direction: column;
-    }
+    } */
 
     nav ul li button {
         padding: 0.8rem 1rem;
@@ -338,4 +340,39 @@ div.testGroup {
     img {
         width: 100px;
     }
+
+    .modal {
+        position: relative;
+        background-color: #1d1929;
+        width: 30rem;
+        height: 50rem;
+    
+        text-align: center;
+    }
+
+    .box {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .modal h2 {
+        margin-top: 2rem;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .modal h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 0;
+        width: 30rem;
+        color: #fff;
+        margin: 1rem 0;
+    }
+
+    .modal a {
+        font-size: 1.3rem;
+    }
+
 }
