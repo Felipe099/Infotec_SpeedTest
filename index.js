@@ -11,9 +11,9 @@ bodyTest.addEventListener('click', () => {
 function I(i) {
     return document.getElementById(i);
 }
-//INITIALIZE SPEEDTEST
-var s = new Speedtest(); //create speedtest object
-s.setParameter('telemetry_level', 'basic'); //enable telemetry
+
+var s = new Speedtest();
+s.setParameter('telemetry_level', 'basic');
 
 var meterBk = /Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)
     ? '#1d1929'
@@ -24,7 +24,6 @@ var dlColor = '#1d1929',
 
 var progColor = '#bdff00';
 
-//CODE FOR GAUGES
 function drawMeter(c, amount, bk, fg, progress, prog) {
     var ctx = c.getContext('2d');
     var dp = window.devicePixelRatio || 100;
@@ -79,17 +78,14 @@ function format(d) {
     return d.toFixed(0);
 }
 
-//UI CODE
 var uiData = null;
 function startStop() {
     if (s.getState() == 3) {
-        //speedtest is running, abort
         s.abort();
         data = null;
         I('startStopBtn').className = '';
         initUI();
     } else {
-        //test is not running, begin
         I('startStopBtn').className = 'running';
         I('shareArea').style.display = 'none';
         s.onupdate = function (data) {
@@ -99,7 +95,6 @@ function startStop() {
             I('startStopBtn').className = '';
             updateUI(true);
             if (!aborted) {
-                //if testId is present, show sharing panel, otherwise do nothing
                 try {
                     var testId = uiData.testId;
                     if (testId != null) {
@@ -121,7 +116,7 @@ function startStop() {
         s.start();
     }
 }
-//this function reads the data sent back by the test and updates the UI
+
 function updateUI(forced) {
     if (!forced && s.getState() != 3) return;
     if (uiData == null) return;
@@ -153,7 +148,7 @@ function updateUI(forced) {
 function oscillate() {
     return 1 + 0.02 * Math.sin(Date.now() / 100);
 }
-//update the UI every frame
+
 window.requestAnimationFrame =
     window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
@@ -166,8 +161,8 @@ function frame() {
     requestAnimationFrame(frame);
     updateUI();
 }
-frame(); //start frame loop
-//function to (re)initialize UI
+frame();
+
 function initUI() {
     drawMeter(I('dlMeter'), 0, meterBk, dlColor, 0);
     drawMeter(I('ulMeter'), 0, meterBk, ulColor, 0);
@@ -183,7 +178,6 @@ const modalOpen = document.querySelector('.modal-wrapper');
 const modalMessage = document.querySelector('.modal .title span');
 const modalClose = document.querySelector('.modal button.close');
 
-
 selectedButton.addEventListener('click', () => {
     modalOpen.classList.add('open');
 });
@@ -192,10 +186,10 @@ modalClose.addEventListener('click', () => {
     modalOpen.classList.remove('open');
 });
 
-window.addEventListener("keydown", closePressButtonEsc)
+window.addEventListener('keydown', closePressButtonEsc);
 
 function closePressButtonEsc(event) {
-if(event.key === "Escape") {
-modalOpen.close();
-}
+    if (event.key === 'Escape') {
+        modalOpen.close();
+    }
 }

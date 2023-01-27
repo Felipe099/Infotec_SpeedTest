@@ -310,6 +310,9 @@ div.testGroup {
     }
 }
 @media (max-width: 600px) {
+    nav {
+        padding: 2rem 2rem 1rem;
+    }
     ul {
         display: flex;
         justify-content: space-between;
@@ -319,11 +322,6 @@ div.testGroup {
         font-size: 3rem;
         margin-top: 3rem;
     }
-    /* #test {
-        display: flex;
-        flex-direction: column;
-    } */
-
     nav ul li button {
         padding: 0.8rem 1rem;
         font-size: 1rem;
