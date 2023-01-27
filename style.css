@@ -160,6 +160,7 @@ div.testArea canvas {
 div.testGroup {
     display: block;
     margin: 0 auto;
+    font-size: 1.3rem;
 }
 
 #ipArea {
@@ -308,7 +309,6 @@ div.testGroup {
     }
 }
 @media (max-width: 600px) {
-    
     ul {
         display: flex;
         justify-content: space-between;
@@ -329,6 +329,10 @@ div.testGroup {
         width: 7rem;
     }
 
+    div.testGroup {
+        font-size: 1rem;
+    }
+
     #startStopBtn {
         margin-top: 2rem;
         width: 8rem;
@@ -346,7 +350,7 @@ div.testGroup {
         background-color: #1d1929;
         width: 30rem;
         height: 50rem;
-    
+
         text-align: center;
     }
 
@@ -374,5 +378,4 @@ div.testGroup {
     .modal a {
         font-size: 1.3rem;
     }
-
 }
