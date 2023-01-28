@@ -272,6 +272,10 @@ div.testGroup {
     gap: 1rem;
 }
 
+#ipArea {
+    padding: 0 4rem;
+}
+
 @keyframes downtop {
     0% {
         transform: translateY(150px) scale(0.1);
