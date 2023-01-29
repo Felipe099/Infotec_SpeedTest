@@ -313,7 +313,8 @@ div.testGroup {
         box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
     }
 }
-@media (max-width: 600px) {
+
+@media (max-width: 1000px) {
     nav {
         padding: 2rem 2rem 1rem;
     }
@@ -348,8 +349,8 @@ div.testGroup {
     .modal {
         position: relative;
         background-color: #1d1929;
-        width: 30rem;
-        height: 50rem;
+        width: 35rem;
+        height: 60rem;
 
         text-align: center;
     }
@@ -370,7 +371,7 @@ div.testGroup {
         font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 0;
-        width: 30rem;
+        width: 36rem;
         color: #fff;
         margin: 1rem 0;
     }
